@@ -1,0 +1,23 @@
+# configuration file for validation process for the cortical microcircuit model
+
+configuration = {
+# number of performed simlations
+'nrun': 10,
+# absolute paths for simulation output
+# output directories should be data{0..nrun-1}
+'nest1_path': "/home/gianmarco/dottorato/cortical_microcircuit/cm_nest1/",
+'nest2_path': "/home/gianmarco/dottorato/cortical_microcircuit/cm_nest2/",
+'nestgpu_path': "/home/gianmarco/dottorato/cortical_microcircuit/cm_ngpu/",
+
+# distributions boxplot (fring rate, CV ISI and Pearson correlation)
+'distributions': ['firing_rate', 'cv_isi', 'correlation'],
+'plot_distributions': True,
+'distribution_visual': 'boxplot', #['violinplot', 'boxplot']
+# pairwise EMD compatrison
+'emd': True,
+'emd_boxplots': True}
+
+
+
+
+
