@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import seaborn as sns
@@ -143,7 +145,7 @@ def __get_distributions(set = ['NEST 1', 'NEST 2', 'NEST GPU']):
                                                                             end/1000.0))
                         file_data = open(path+"/firing_rate_"+str(ipop)+".dat", "w")
                         np.savetxt(file_data, dist)
-                        file_data.close
+                        file_data.close()
                         dist = []
 
                     # computing CV ISI
